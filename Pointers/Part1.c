@@ -96,7 +96,7 @@ char* CreateString(char* string1,char* string2)
 		 int p;
 		 char* tmp=(char*)malloc(sizeof(int)*(strlen(string2)+1));
 		 for(;*string2!='\0';string2++,p++)
-		  *(tmp+p)=*string2;
+		  	*(tmp+p)=*string2;
 		 string2=tmp;
 		 return tmp;
 		 free(tmp);
@@ -152,28 +152,28 @@ void PrintArray(int* group,int Size)
 //a function that returns a new array //
 int* MergeTwoArrays(int* arr1,int size1,int* arr2,int size2,int* size3)
 {
-		 int i,j,k;
-		 int* arr3=NULL;
-		 arr3=(int*)malloc((*size3)*sizeof(int));
-		 k=j=i=0;
+	int i,j,k;
+	int* arr3=NULL;
+	arr3=(int*)malloc((*size3)*sizeof(int));
+	k=j=i=0;
 
-		 while(i<size1 && j<size2)
-		 {
-			 if(arr1[i]<=arr2[j])
-			  {
-				  arr3[k]=arr1[i];
-				  i++;
-				  k++;
-			  }
-			  else
-			  {
-				   arr3[k]=arr2[j];
-				   j++;
-				   k++;
-			  }
-		 }
-	 while(i<size1)
-	 {
+	while(i<size1 && j<size2)
+	{
+		if(arr1[i]<=arr2[j])
+		{
+			arr3[k]=arr1[i];
+			i++;
+			k++;
+		}
+		else
+		{
+			arr3[k]=arr2[j];
+			j++;
+			k++;
+		}
+	}
+	while(i<size1)
+	{
 		  arr3[k]=arr1[i];
 		  i++;
 		  k++;
