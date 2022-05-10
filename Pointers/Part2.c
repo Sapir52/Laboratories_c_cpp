@@ -100,8 +100,8 @@ void BuildMatrix(int*** matrix,int row,int column)
 					   exit(1);
 				   }
 			  scanf("%d",&(*matrix)[i][j]);
-		  }
-	 }
+		  	}
+		}
 }
 //a function that receives a pointer and frees memory//
 void FreeMatrix(int*** matrix,int row)
@@ -184,9 +184,7 @@ int** multiPlyMatrixes(int** a, int** b,int size1,int size2,int size3)
 			   for (int colIndex = 0; colIndex <size3; colIndex++)
 			   {
 					for (int col = 0; col <size2; col++)
-					{
 						multiplication[row][colIndex] = multiplication[row][colIndex] + a[row][col] * b[col][colIndex];
-					}
 			   }
 		  }
 	 }
