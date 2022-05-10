@@ -35,8 +35,6 @@ int main(){
 		  printf("\nEnter num (char) lect: \n");
 		  fgets(buffer,SIZE-1,stdin);
 		  int len=strlen(buffer);
-		  fgets(buffer,SIZE-1,stdin);
-		  len=strlen(buffer);
 		  if(buffer[len-1]=='\n')
 				buffer[len-1]='\0';
 		  (*lect1).name=(char*)malloc(len*sizeof(char)+1);
@@ -79,7 +77,7 @@ int main(){
 	  strcpy((N_cours),buffer2);
 	  printf("\nN_cours is:%s\n",N_cours);
 	  course_lecturers(lect1,N_cours,mis);
- 
+  	//--------------------------------------------------------------//
 	  char*lect_1, *lect_2;
 	  char buffer3[SIZE];
 	  char buffer4[SIZE];
@@ -104,16 +102,14 @@ int main(){
 	  strcpy((lect_2),buffer4);
 	  printf("\nlect_2:%s\n",lect_2);
 	  common(lect1,lect_1, lect_2, mis);
- 
-
- 
-	 free((lect1)[i].name);
-	 (lect1)[i].name=NULL;
-	 free((lect1)[i].courses);
-	 (lect1)[i].courses=NULL;
-	 free (lect1);
-	 lect1=NULL;
-	 return 0;
+ 	//--------------------------------------------------------------//
+	  free((lect1)[i].name);
+	  (lect1)[i].name=NULL;
+	  free((lect1)[i].courses);
+	  (lect1)[i].courses=NULL;
+	  free (lect1);
+	  lect1=NULL;
+	  return 0;
 }
 
 //punction num 1//
@@ -125,9 +121,7 @@ void course_lecturers(lecturer *lect1,char* N_cours,int mis)
 		  for(j=0;j<lect1[i].num_of_courses;j++)
 		  {
 			   if(strcmp(N_cours,(lect1)[i].courses[j])==0)
-			   {
 					printf("\n%s the lect1:%s\n",(lect1)[i].name,N_cours);
-			   } 
 		  }
 	 }
 } 
@@ -140,9 +134,7 @@ void common(lecturer *lect1,char* lect_1, char* lect_2,int mis)
 		  for(j=0;j<lect1[i].num_of_courses;j++)
 		  {
 			   if(strcmp(lect_1,(lect1)[i].courses[j])==strcmp(lect_2,(lect1)[i].courses[j])==0)
-			   {
 					printf("\n courses name is:%s\n",(lect1)[i].courses[j]);
-			   } 
 		  }
 	 }
 }
