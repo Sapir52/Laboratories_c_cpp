@@ -36,9 +36,7 @@ int main()
 		 scanf("%s",string2);
 		 tmp=CreateString(string1,string2);
 		 for(i=0;i<size1;i++)
-		 {
 			 printf("%c%s",string1[i],tmp);
-		 }
 		 free(string1);
 		 string1=NULL;
 		 free(string1);
@@ -87,7 +85,6 @@ int main()
 		 arr1=NULL;
 		 free(arr2);
 		 arr2=NULL;
-
 		 return 0;
 }
 //a function that accept two strings and creates a new string//
@@ -133,9 +130,7 @@ void PrintArray(int* group,int Size)
 			 exit(1);
 		 }
 		 if(Size==0)
-		 {
 			  printf("()");
-		 }
 		 else
 		 {
 			 printf("Enter array");
