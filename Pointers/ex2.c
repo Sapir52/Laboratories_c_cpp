@@ -26,9 +26,7 @@ int main(){
 	scanf("%d",&choich);
 	Choich(vectors,sizes,size,choich);
 	while(choich==5)
-	{
 		Choich(vectors,sizes,size,choich);
-	}
 
 	do{
 		printf("\nEnter choich:\n1-set\n2-append\n3-drop\n4-print\n5-quit\n");
@@ -36,9 +34,7 @@ int main(){
 		Choich(vectors,sizes,size,choich);
 
 		while(choich==5)
-		{
 			Choich(vectors,sizes,size,choich);
-		}
 
 	}while(*sizes!=0 || choich!=5);
 	
@@ -63,9 +59,7 @@ void Choich(int** vectors,int* sizes,int size,int choich)
 				exit(1);
 			}
 			for(i=0;i<tmp_size;i++)
-			{
 				scanf("%d",&tmp[i]);
-			}
 			if(index<=size)
 			{
 				printf("Enter index\n");
@@ -95,9 +89,7 @@ void Choich(int** vectors,int* sizes,int size,int choich)
 				exit(1);
 			}
 			for(i=0;i<tmp_size;i++)
-			{
 				scanf("%d",&tmp[i]);
-			}
 			if(index<=size)
 			{
 				printf("Enter index\n");
@@ -184,9 +176,7 @@ int init(int ***vectors, int **sizes, int size)
 	}
 	
 	for(i=0;i<size;i++)
-	{
 		(*vectors)[i]=NULL;
-	}
 
 }	
 	
@@ -201,9 +191,7 @@ int Set( int **vectors,int *sizes, int index, int *tmp, int tmp_size)
 	}
 	vectors[index]=(int*)malloc(tmp_size*sizeof(int));
 	for(i=0;i<tmp_size+1;i++)
-	{
 		vectors[index][i]=tmp[i];
-	}
 	sizes[index]=tmp_size;
 }
 
@@ -213,9 +201,7 @@ int append(int **vectors, int *sizes, int index, int *tmp,int tmp_size)
 	int i,j=0;
 	(vectors)[index]=realloc((*vectors),tmp_size*sizeof(int));
 	for(i=sizes[index];i<sizes[index]+tmp_size;i++)
-	{
 		vectors[index][i]=tmp[j++];
-	}
 	sizes[index]=sizes[index]+tmp_size;
 }
 
@@ -239,10 +225,7 @@ int drop(int **vectors, int *sizes, int index, int num)
 		
 			sizes[index]=sizes[index]-1;
 			for(i=j;i<sizes[index];i++)
-			{
-
-			vectors[index][i]=vectors[index][i+1];
-			}
+				vectors[index][i]=vectors[index][i+1];
 		
 		}
 
@@ -253,21 +236,14 @@ int drop(int **vectors, int *sizes, int index, int num)
 //A function that prints all vectors//
 void print(int **vectors, int *sizes, int size)
 {
-
-
 	int i,j;
 	for(i=0;i<size;i++)
 	{
 		printf("[%d]={",i);
 		if(vectors[i]!=NULL)
-		{
-				
+		{	
 				for(j=0;j<sizes[i];j++)
-				{
 					printf("%d",(vectors)[i][j]);
-				
-				}
-			
 		}
 		printf("}\n");
 	}
