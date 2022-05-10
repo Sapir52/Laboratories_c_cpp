@@ -46,9 +46,7 @@ char* EvenStr(char *str)
 			{
 				k=j-i; 
 				if(k%2==0) 
-				{
 					countEeven++;
-				}
 				
 			}
 			i=j+1;
@@ -56,9 +54,7 @@ char* EvenStr(char *str)
 	
 	}	
 	if(countEeven==0)
-	{
 		return NULL;
-	}
 	even=(char*)malloc((countEeven)*sizeof(char));
 	if(even==NULL)
 	{
@@ -78,9 +74,7 @@ char* EvenStr(char *str)
 				{
 					even[p++]=str[i];
 					if(k%2!=0)
-					{
 						i--;
-					}
 				}
 			i=j+1;
 			}
@@ -113,14 +107,12 @@ char* IndEven(char* str)
 					if(str[i]=='\0')
 					{
 						for(int p=(j-Count2);p<=j;p++)
-						{
 							buffer[p]=0;
-						}
 					}
 				}
 
-			j=j-Count1;
-			Count1=0;
+				j=j-Count1;
+				Count1=0;
 			}
 			else
 			{
@@ -151,12 +143,10 @@ void Remove(char* In, char* Ou)
 		if(In[IndIn] == ' ')
 		{
 			while(In[IndIn + 1] == ' ')
-			{
 				IndIn++;
-			}
 		}
-	IndOu++;
-	IndIn++; 
+		IndOu++;
+		IndIn++; 
 	}
 	Ou[IndOu] = '\0';
 
