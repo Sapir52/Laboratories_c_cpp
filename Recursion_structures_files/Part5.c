@@ -276,9 +276,7 @@ int FlightsByYear(Flight *PFlig,int NumbF,int TheYear)
 	for(i=0;i< NumbF;i++)
 	{
 		if((PFlig)[i].Flig.year==TheYear)
-		{
 			count++;
-		}
 	}
 	return count;
 
