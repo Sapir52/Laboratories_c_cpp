@@ -1,6 +1,6 @@
-# Laboratories_c_cpp
+# Laboratories in C and CPP
 
-Laboratories in c and cpp languages:
+The subject of the laboratories are:
 
   - Pointers
   - Structures
