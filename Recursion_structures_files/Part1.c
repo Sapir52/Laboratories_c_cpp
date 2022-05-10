@@ -80,88 +80,56 @@ void latin_letters(char* str)
 { 
 	 int i=0;
 	 if(((*str)>='a' && (*str)<='z') || ((*str)>='A' && (*str)<='Z'))
-	 {
 		  printf("latin letters:%s\n",str);
-	 }
 	 if((*str)=='\n')
-	 {
 		 latin_letters(str);
-	 }
 }
 //Program for recursion function num 3//
 int lettle_latin(char* str)
 {
 	 if((*str)=='\n')
-	 {
 		return 1;
-	 }
 	 if((*str)<'a' || (*str)>'z')
-	 {
 		return 0;
-	 }
 	 lettle_latin(++(str));
 }
 //Program for recursion function num 4//
 int one_mis(char* str)
 {
 	 if((*str)==('\n'))
-	 {
 		return 0;
-	 }
 	 if((*str)<'a'|| (*str)>'z')
-	 {
 		return 1;
-	 }
 	 one_mis(++(str));
 }
 //Program for recursion function num 5//
 int fibonacci(int* arr,int size2)
 {
 	 if(size2<=2)
-	 {
 		return 1;
-	 }
 	 if(arr[size2-1]-arr[size2-2]==arr[size2-3])
-	 {
 		fibonacci(arr,size2-1);
-	 }
 	 else
-	 {
 		return 0;
-	 }
 }
 //Program for recursion function num 6//
 int positAndNeg(int* arr,int k)
 {
 	 if(arr[k]>0 && arr[k+1]<0)
-	 {
 		return 1;
-	 }
 	 else if(arr[k]<0 && arr[k+1]>0)
-	 {
 		return 1;
-	 }
 	 else
-	 {
 		return 0;
-	 }
 }
 //Program for recursion function num 7//
 int odd_num(long num)
 {
 	 int index =0;
 	 if(num<=index)
-	 {
 		return index;
-	 }
 	 if((num%2)==1)
-	 {
 		return (num%10+odd_num(num/10));
-	 }
 	 else
-	 {
 		return (odd_num(num/10));
-	 }
 }
-
-
