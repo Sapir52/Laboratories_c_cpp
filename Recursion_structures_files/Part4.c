@@ -128,13 +128,9 @@ int MaxDigit( int num)
 		digit1=num%10;
 		digit2=MaxDigit(num/10);
 		if(digit1>digit2)
-		{
 			return digit1;
-		}
 		else
-		{
 			return digit2;
-		}
 	}
 	else // num<0 //
 	{
@@ -142,13 +138,9 @@ int MaxDigit( int num)
 		digit1=NewNum%10;
 		digit2=MaxDigit(NewNum/10);
 		if(digit1>digit2)
-		{
 			return digit1;
-		}
 		else
-		{
 			return digit2;
-		}
 	}
 }
 /******************************************************/
@@ -157,13 +149,9 @@ int MaxDigit( int num)
 int Equal(int number, int sum)
 {
 	if(func(number)==sum)
-	{
 		return TRUE;
-	}
 	else
-	{
 		return FALSE;
-	}
 
 }
 //A function that returns the sum of digits of Number//
@@ -171,14 +159,9 @@ int func(int number)
 {
 	int count1=0;
 	if(number<0)
-	{
 		return -1;
-	}
 	else if(number>0)
-	{
 		count1+=number%10+func(number/10);
-
-	}
 }
 /******************************************************/
 
@@ -195,9 +178,7 @@ float SumNMember(float a,float d, int ind)
 {
 	float num=0,sum=0,totalSum=0;
 	if(ind==1)
-	{
 		return a;
-	}
 	else if(ind>1)
 	{
 		num=NMember(a,d,ind);
@@ -214,15 +195,11 @@ float SumNMember(float a,float d, int ind)
 int EvenAndOdd(int *arr,int size)
 {
 	if(size==1)
-	{
 		return TRUE;
-	}
 	int check1=arr[size-1]%2;
 	int check2=arr[size-2]%2;
 	if(check1 != check2)
-	{
 		return EvenAndOdd(arr,size-1);
-	}
 	return FALSE;
 }
 /******************************************************/
@@ -231,22 +208,14 @@ int EvenAndOdd(int *arr,int size)
 int CheckString(char *str)
 {
 	if((*str)=='\0')
-	{
 		return 1;
-	}
 
 	if((*str)>='a'&& (*str)<='z')
-	{
 		return CheckString(++(str));
-	}
 	if((*str)>='A'&& (*str)<='Z')
-	{
 		return CheckString(++(str));
-	}
 	if((*str)<'a'|| (*str)>'z')
-	{
 		return 0;
-	}
 
 }
 /******************************************************/
@@ -258,17 +227,11 @@ int SameTav(char *str1,char *str2)
 	func2(str1);
 	func2(str2);
 	if(*str1=='\0' || *str1=='\0')
-	{
 		return 1;
-	}
 	if(*str1==*str2)
-	{
 		return 1+SameTav(str1+1,str2+1);
-	}
 	else
-	{
 		SameTav(str1+1,str2+1);
-	}
 }
 
 //A function that turns all letters in a string into smaller ones//
@@ -276,16 +239,9 @@ void func2 (char *string)
 {
 	int i;
 	if((*string)=='\0')
-	{
 		return;
-	}
 	if((*string)>='A' && (*string)<='Z')
-	{
 		(*string)+=('a'-'A');
-
-	}
 	func2 (string+1);
 }
 /******************************************************/
-
-
