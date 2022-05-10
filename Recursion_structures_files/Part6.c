@@ -28,10 +28,7 @@ int main(){
 		exit(0);
 	}
 	
-	
 	TheFunction(Fin,Fout);	
-
-	
 	fclose(Fout);
 	fclose(Fin);
 
@@ -49,9 +46,7 @@ void TheFunction(FILE *Fin,FILE *Fout)
 		while (fscanf( Fin, "%d", &mis)!=EOF)
 		{
 			if(frequency==mis)
-			{
 				count++;
-			}
 			if(count>most) //Find the most common number in a file//
 			{
 				most=count;
@@ -65,13 +60,9 @@ void TheFunction(FILE *Fin,FILE *Fout)
 
 			}
 		 	if (mis > max) //Find the maximum number in a file//
-			{
 				max = mis;
-			}
 			else if (mis < min) //Find the minimum number in a file//
-			{
 				min = mis;
-			}
 		}
 	}
 	fprintf(Fout,"%d\n%d\n",indMost,indLeast); //Printing data into a file//
