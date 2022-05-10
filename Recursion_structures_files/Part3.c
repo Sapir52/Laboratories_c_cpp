@@ -28,9 +28,7 @@ int main(){
 	 cars*cars_date =(cars*)malloc(size*sizeof(cars));
 
 	 for(i=0;i<size;i++)
-	 {
 		fscanf(fp,"%ld %s %d %d \n",&cars_date[i].licens_plate, cars_date[i].model, &cars_date[i].year_of_prod,&cars_date[i].price);
-	 }
 
 	 printf("Enter choice model\n");
 	 scanf("%s",car1.model);
@@ -42,9 +40,7 @@ int main(){
 	 for(i=0;i<size;i++)
 	 {
 		 if((strcmp(car1.model,cars_date[i].model)==0) && car1.price>=cars_date[i].price && car1.year_of_prod<=cars_date[i].year_of_prod)
-		  {
 				printf("%ld %s %d %d\n",cars_date[i].licens_plate, cars_date[i].model, cars_date[i].year_of_prod, cars_date[i].price);
-		  }
 		 else
 			   printf("Not car");
 			   break;
